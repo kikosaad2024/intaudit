@@ -1,6 +1,6 @@
 "https://{default}/":
    type: upstream
-   upstream: "app:http"
+   upstream: "web:http"
    cache:
        # Disable the HTTP cache on this route. It's handled by the CDN instead.
        enabled: false
