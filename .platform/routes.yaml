@@ -3,6 +3,5 @@
     type: upstream
     upstream: "varnish:http"
     cache:
-        enabled: true
-        default_ttl: 3600  # مدة التخزين المؤقت الافتراضية (بالثواني)
-    fallback: "app:http"
+        enabled: true          # تمكين التخزين المؤقت
+        default_ttl: 3600      # مدة التخزين المؤقت الافتراضية (ساعة واحدة)
