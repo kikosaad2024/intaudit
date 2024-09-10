@@ -1,4 +1,8 @@
-# services.yaml
 varnish:
     type: varnish:6.0
-    disk: 256
+    relationships:
+        main: 'app:http'
+    configuration:
+        vcl: !include
+            type: string
+            path: varnish.vcl
