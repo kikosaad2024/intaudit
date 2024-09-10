@@ -1,7 +1,6 @@
-"https://{default}":
-    tls:
-        client_authentication: "require"
-        client_certificate_authorities:
-            - !include
-                type: string
-                path: cdn.crt
+"https://{default}/":
+   type: upstream
+   upstream: "app:http"
+   cache:
+       # Disable the HTTP cache on this route. It's handled by the CDN instead.
+       enabled: false
