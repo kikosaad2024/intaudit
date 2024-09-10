@@ -2,7 +2,7 @@
 varnish:
     type: varnish:6.0
     relationships:
-        main: 'web:http' # تأكد من أن "app" هو الاسم الصحيح لتطبيقك
+        main: 'main/web:http' # تأكد من أن "app" هو الاسم الصحيح لتطبيقك
     configuration:
         vcl: !include
             type: string
