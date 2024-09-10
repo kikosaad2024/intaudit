@@ -1,5 +1,1 @@
-# .platform/services.yaml
-web:
-    type: nginx:1.19
-    configuration:
-        file: .platform/nginx.conf
+
