@@ -1,3 +1,8 @@
-https://{default}/:
+# routes.yaml
+"https://{default}/":
     type: upstream
-    upstream: app:http
+    upstream: "varnish:http"
+    cache:
+        enabled: true
+        default_ttl: 3600  # مدة التخزين المؤقت الافتراضية (بالثواني)
+    fallback: "app:http"
