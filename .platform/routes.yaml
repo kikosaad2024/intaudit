@@ -1,3 +1,7 @@
 "https://{default}":
-    type: upstream
-    upstream: "app:http"
+    tls:
+        client_authentication: "require"
+        client_certificate_authorities:
+            - !include
+                type: string
+                path: cdn.crt
