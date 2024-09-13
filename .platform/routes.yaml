@@ -1,3 +1,5 @@
-http://{default}/:
+"https://{default}/":
     type: upstream
-    upstream: htmlhowto:http
+    upstream: "varnish:http"
+    cache:
+        enabled: false
