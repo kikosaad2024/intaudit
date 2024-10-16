@@ -1,4 +1,4 @@
-"https://{default}/":
+"http://{default}/":
     type: upstream
     upstream: "varnish:http"
     cache:
