@@ -13,7 +13,7 @@ sub vcl_recv {
 
     # Only allow a few POST/PUTs per client.
     if (req.method == "POST" || req.method == "PUT") {
-        if (vsthrottle.is_denied("rw" + req.http.X-Client-IP, 1, 30s, 600s)) {
+        if (vsthrottle.is_denied("rw" + req.http.X-Client-IP, 10, 30s, 600s)) {
             return (synth(429, "Too Many Requests"));
         }
     }
